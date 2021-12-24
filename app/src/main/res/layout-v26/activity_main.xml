@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <View
+        android:id="@+id/topView"
+        android:layout_width="375dp"
+        android:layout_height="95dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.204"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="406dp"
+        android:layout_height="66dp"
+        android:background="@drawable/ic_wave"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topView"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <!--gambar profile-->
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="95dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/topView"
+        app:layout_constraintEnd_toStartOf="@+id/topView"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_person" />
+
+    <!--register akun-->
+
+    <!--Nama-->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:text="@string/register_akun"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/topView"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editNama"
+        android:layout_width="343dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/round_border"
+        android:ems="10"
+        android:hint="@string/nama"
+        android:inputType="textPersonName|textCapWords"
+        android:nextFocusDown="@id/alamat"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view2"
+        android:importantForAutofill="no" />
+
+    <!--alamat-->
+    <EditText
+        android:id="@+id/alamat"
+        android:layout_width="343dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/round_border"
+        android:ems="10"
+        android:hint="@string/alamat"
+        android:inputType="textPersonName|textCapWords"
+        android:padding="10dp"
+        android:nextFocusDown="@id/jenisKelamin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.307"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editNama"
+        android:importantForAutofill="no" />
+
+    <!--jenis kelamin-->
+    <TextView
+        android:id="@+id/Jenis"
+        android:layout_width="347dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="20dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/jenisKelamin"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/alamat" />
+
+
+
+
+
+    <!--pilihan jenis kelamin -->
+    <RadioGroup
+        android:id="@+id/jenisKelamin"
+        android:layout_width="342dp"
+        android:layout_height="41dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Jenis">
+
+        <RadioButton
+            android:id="@+id/laki"
+            android:layout_width="148dp"
+            android:layout_height="wrap_content"
+            android:text="@string/laki_laki" />
+
+        <RadioButton
+            android:id="@+id/perempuan"
+            android:layout_width="197dp"
+            android:layout_height="wrap_content"
+            android:text="@string/perempuan" />
+    </RadioGroup>
+
+
+
+    <!--seekbar umur-->
+
+    <TextView
+        android:id="@+id/Usia"
+        android:layout_width="345dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:text="@string/usia_10_25_tahun"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.954"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/jenisKelamin" />
+
+    <SeekBar
+        android:id="@+id/seekBarUsia"
+        android:layout_width="357dp"
+        android:layout_height="26dp"
+        android:max="25"
+        android:min="10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Usia"
+        tools:targetApi="o" />
+
+    <TextView
+        android:id="@+id/viewUsia"
+        android:layout_width="348dp"
+        android:layout_height="26dp"
+        android:gravity="center"
+        android:text="10 tahun"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekBarUsia" />
+
+
+
+    <!--Chekbox agama-->
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="370dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:text="@string/pilih_agama"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewUsia" />
+
+    <TableLayout
+        android:id="@+id/tableLayout2"
+        android:layout_width="356dp"
+        android:layout_height="105dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!--cheekbox hindu-->
+            <CheckBox
+                android:id="@+id/hindu"
+                android:layout_width="0dp"
+                android:layout_height="33dp"
+                android:layout_weight="1"
+                android:text="@string/Hindu" />
+
+            <CheckBox
+                android:id="@+id/Katolik"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/Katolik" />
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!--cheekbox islam-->
+            <CheckBox
+                android:id="@+id/Islam"
+                android:layout_width="0dp"
+                android:layout_height="33dp"
+                android:layout_weight="1"
+                android:text="@string/Islam" />
+            <!--cheekbox buddha-->
+            <CheckBox
+                android:id="@+id/Buddha"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/Buddha" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!--cheekbox kristen-->
+            <CheckBox
+                android:id="@+id/Kristen"
+                android:layout_width="0dp"
+                android:layout_height="24dp"
+                android:layout_weight="1"
+                android:text="@string/Kristen" />
+            <!--cheekbox konghucu-->
+            <CheckBox
+                android:id="@+id/Konghucu"
+                android:layout_width="0dp"
+                android:layout_height="37dp"
+                android:layout_weight="1"
+                android:text="@string/Konghucu" />
+        </TableRow>
+    </TableLayout>
+
+
+
+
+    <!--bottun-->
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="384dp"
+        android:layout_height="64dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout2">
+
+        <Button
+            android:id="@+id/submitRegis"
+            android:layout_width="96dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="131dp"
+            android:layout_marginEnd="126dp"
+            android:padding="15dp"
+            android:text="@string/submit"
+            tools:layout_editor_absoluteX="140dp" />
+
+    </RelativeLayout>
+
+    <!--backround biru-->
+
+    <!--gelombang backround-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

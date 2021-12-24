@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Project Praktikum</string>
+    <string name="Hindu">hindu</string>
+    <string name="Islam">Islam</string>
+    <string name="Kristen">Kristen</string>
+    <string name="Katolik">Katolik</string>
+    <string name="Buddha">Buddha</string>
+    <string name="Konghucu">Konghucu</string>
+    <string name="nama">nama</string>
+    <string name="alamat">alamat</string>
+    <string name="jenisKelamin">Jenis Kelamin</string>
+    <string name="usia">Usia</string>
+    <string name="perempuan">Perempuan</string>
+    <string name="laki_laki">Laki-Laki</string>
+    <string name="usia_10_25_tahun">Usia|(10 - 25 tahun)</string>
+    <string name="register_akun">REGISTER AKUN</string>
+    <string name="pilih_agama">Pilih Agama</string>
+    <string name="submit">Submit</string>
+    <item name="Jenis" type="id">Jenis</item>
+    <item name="laki" type="id">laki</item>
+    <item name="perempuan" type="id">perempuan</item>
+    <item name="seekBarUsia" type="id">seekBarUsia</item>
+    <item name="viewUsia" type="id">ViewUsia</item>
+    <item name="textView3" type="id">textView3</item>
+    <item name="tableLayout2" type="id">tableLayout2</item>
+    <item name="hindu" type="id" />
+</resources>
